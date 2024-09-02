@@ -33,12 +33,13 @@ SELECT * FROM chicago_public_schools A INNER JOIN ( SELECT * FROM chicago_socioe
 	ON A.COMMUNITY_AREA_NUMBER = B.COMMUNITY_AREA_NUMBER
 ;
 ```
+
+### Select, where cause condition, and left join ###
 <p align="center" width="100%">
-    <img width="47%" src="https://github.com/jkaewprateep/IBM---SQL-A-Practical-Introduction-for-Querying-Databases/blob/main/cat_01.png"> </br>
+    <img width="37%" src="https://github.com/jkaewprateep/IBM---SQL-A-Practical-Introduction-for-Querying-Databases/blob/main/cat_02.png"> </br>
     <b> Pictures from the Internet </b> </br>
 </p>
 
-### Select, where cause condition, and left join ###
 ```
 # Q2 List all crimes that took place at a school. Include case number, crime type and community name.
 
@@ -48,6 +49,11 @@ SELECT * FROM chicago_crime A LEFT JOIN ( SELECT * FROM chicago_socioeconomic_da
 ```
 
 ### Select, where cause condition, and left join sub-query ###
+<p align="center" width="100%">
+    <img width="47%" src="https://github.com/jkaewprateep/IBM---SQL-A-Practical-Introduction-for-Querying-Databases/blob/main/cat_01.png"> </br>
+    <b> Pictures from the Internet </b> </br>
+</p>
+
 ```
 # Q3 For the communities of Oakland, Armour Square, Edgewater and CHICAGO list the associated
 # community_area_numbers and the case_numbers.
