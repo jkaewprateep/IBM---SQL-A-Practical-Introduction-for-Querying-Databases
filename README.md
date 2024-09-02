@@ -256,6 +256,9 @@ select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
 
 ### Select, left outer join and where conditions ###
 
+🦭💬 Finding non-log-in users is easy by filtering users' activities from the user activities table or completed interactions from the interactions table. </br>
+👧💬 🎈 Verify update case by case id or find the remaining tasks to process for different media types query or create of balancing tasks assignment target. </br>
+
 ```
 --- Query 2C ---
 select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
@@ -266,6 +269,9 @@ select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
 ```
 
 ### UNION sub-queries, joining ###
+
+🦭💬 Concatenate result sets for dataset resources when it can order result activities in different types as the category reports. </br>
+👧💬 🎈 Create of category report to compare that is important for statistics evaluation for individual and category types, perform category to compare the same property from similar statistics objects for research and study. </br>
 
 ```
 --- Query 3A ---
@@ -283,6 +289,9 @@ select E.F_NAME,E.L_NAME,D.DEP_NAME
 ```
 
 ### UNION sub-queries, joining on multiple matching conditions ###
+
+🧸💬 By application of condition filterings there are more specific criteria of the record, the second or third times selection such as the population of people in Thailand, where they are IT business companies employees, they are male and they age 40 - 44 with data analytics skills and data analytics tools. </br>
+🥺💬 I would line to concatenate selection filed '1' as Jirayu. </br>
 
 ```
 --- Query 3B ---
