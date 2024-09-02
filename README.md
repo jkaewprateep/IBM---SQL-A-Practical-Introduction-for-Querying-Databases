@@ -59,6 +59,8 @@ SELECT * FROM chicago_crime A LEFT JOIN ( SELECT * FROM chicago_socioeconomic_da
     <b> Pictures from the Internet </b> </br>
 </p>
 
+🦭💬 There are small to large datasets and they have different time query result returns by default this technique will have the answer when both sub-queries have the result set and perform outer join operation and filter for the results. There are possible errors when one or a required sub-query are not return the answer if the sib-query are not the main objective it may be left blank without error or message because database caches need to respond in query time fashionally as the other sub-queries that is known problem when we joined multiple tables from different sources and communication method. A driver and database cache perform work this way and refresh database caches to refresh the fetching result and start filling into the resultset to have the full answer. Refresh caches is not the method but the selection mode is the data return guarantee. </br>
+
 ```
 # Q3 For the communities of Oakland, Armour Square, Edgewater and CHICAGO list the associated
 # community_area_numbers and the case_numbers.
