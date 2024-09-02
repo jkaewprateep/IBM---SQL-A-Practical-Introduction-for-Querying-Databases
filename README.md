@@ -56,6 +56,9 @@ SELECT * FROM chicago_crime A LEFT JOIN ( SELECT * FROM chicago_socioeconomic_da
     <b> Pictures from the Internet </b> </br>
 </p>
 
+🐑💬 ➰ By each recording process primarily from the left side finding relation records by selecting condition on the right side, they are processed by iteration and target table process at the same time because using join with condition and sub-query are processes separate from the primary SQL statement by default. </br>
+🐐💬 There is a process time delay response to confirm the process running and continuing and the database may require temporary tables, query cache, disk space, or memory to perform a long query. In guarantee mode no result return but in first answer you have some information from the query return and may not completed of the result set but they will have some descrtiption and warning message programmer and database administrators need to handle it correct behaviour. </br>
+
 ```
 # Q3 For the communities of Oakland, Armour Square, Edgewater and CHICAGO list the associated
 # community_area_numbers and the case_numbers.
