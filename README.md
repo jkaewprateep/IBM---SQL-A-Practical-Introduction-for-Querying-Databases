@@ -16,6 +16,12 @@ IBM - SQL A Practical Introduction for Querying Databases
 ## Practical quizzes - not a peer review ##
 
 ### Select, where cause condition, and inner join ###
+<p align="center" width="100%">
+    <img width="47%" src="https://github.com/jkaewprateep/IBM---SQL-A-Practical-Introduction-for-Querying-Databases/blob/main/kid_35.jpg"> </br>
+    <b> Pictures from the Internet </b> </br>
+</p>
+
+
 ```
 # Q1 List the case number, type of crime and community area for all crimes in community area number 18.
 # SELECT * FROM chicago_socioeconomic_data WHERE `COMMUNITY_AREA_NUMBER` = 18;
