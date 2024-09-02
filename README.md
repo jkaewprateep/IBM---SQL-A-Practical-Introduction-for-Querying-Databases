@@ -186,6 +186,9 @@ SELECT "PER_CAPITA_INCOME" FROM "PYV10949".chicago_census_data
 
 ### Select, inner join and where cause conditions ###
 
+🧸💬 Better than evaluation, aggregation selection method inner joined with where causes can perform indexes for the faster response of sub-queries and min-max values. </br>
+🦭💬 Now you know the database subqueries joining when someone tries to fetch the min-max value from none-indexes fields in the remote data table, SQL statement is a guarantee return method by the min-max function. Try to compare the joining method on sub-queries and aggregate method and see the performance. </br>
+
 ```
 --- Query1A ---
 select E.F_NAME,E.L_NAME, JH.START_DATE 
