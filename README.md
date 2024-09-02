@@ -1,4 +1,4 @@
-# IBM - IBM - SQL A Practical Introduction for Querying Databases
+# IBM - SQL A Practical Introduction for Querying Databases
 IBM - SQL A Practical Introduction for Querying Databases
 
 * IBM Data Warehouse Engineer Professional Certificate [IBM]( https://github.com/jkaewprateep/Portfolio/blob/main/Coursera%204K7JZCI2I9XO.pdf )
