@@ -148,6 +148,8 @@ END
     <b> Pictures from the Internet </b> </br>
 </p>
 
+🧸💬 Aggregation on the remote table is one problem of the SQL selection performance because the SQL statement needs evaluation of the remote table finish to perform continue overall task and when this solution is introduced the local aggregate table, indexes, and statistics tables are created to perform the required operation by the required value and they can re-evaluation same as an application in some working place. There is a demand to create order and file the order into the cargo when we do not know exact number of quality but a chunk of cattrage can estimate number quantity and complete the exact number. </br>
+
 ```
 # Q9 Use a sub-query to determine which Community Area has the least value for school Safety Score?
 
