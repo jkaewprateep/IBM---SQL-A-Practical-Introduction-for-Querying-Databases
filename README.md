@@ -167,6 +167,8 @@ WHERE "SAFETY_SCORE" > 0 )
     <b> Pictures from the Internet </b> </br>
 </p>
 
+🦭💬 Evaluation needs to be performed after the SQL statement but categorization can be performed it before some applications apply the technique of database categorization by using a database filter with a database record trigger or interaction by category table using application or database process. This method helps determine the categorize faster but you need to be aware of the condition of the primary and secondary categorize because full records are required of both categorized groups and their description. </br>
+
 ```
 # Q10 [Without using an explicit JOIN operator]
 	Find the Per Capita Income of the Community Area which has a school Safety Score of 1.
