@@ -33,6 +33,10 @@ SELECT * FROM chicago_public_schools A INNER JOIN ( SELECT * FROM chicago_socioe
 	ON A.COMMUNITY_AREA_NUMBER = B.COMMUNITY_AREA_NUMBER
 ;
 ```
+<p align="center" width="100%">
+    <img width="47%" src="https://github.com/jkaewprateep/IBM---SQL-A-Practical-Introduction-for-Querying-Databases/blob/main/cat_01.png"> </br>
+    <b> Pictures from the Internet </b> </br>
+</p>
 
 ### Select, where cause condition, and left join ###
 ```
