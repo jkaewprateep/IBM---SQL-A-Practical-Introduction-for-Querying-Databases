@@ -310,6 +310,9 @@ select E.F_NAME,E.L_NAME,D.DEPT_ID_DEP, D.DEP_NAME
 
 ### Select, left outer join and where conditions ###
 
+🧸💬 In the case of employees table is a primary table to find where is employees they are not in hiring but in the case of the application table to find who is the most tries applications. </br>
+🥺💬 I see from news last year that somebody have the same problem as my and that is not at good ideas to create an automated application email by filtering results from job application recruiter websites. I think there is something similar as him now. </br>
+
 ```
 --- alt Query 3B ---
 select E.F_NAME,E.L_NAME,D.DEPT_ID_DEP, D.DEP_NAME
