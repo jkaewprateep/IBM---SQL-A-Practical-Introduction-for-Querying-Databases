@@ -128,6 +128,10 @@ END
 ```
 
 ### Select min-max from the remote data table ###
+<p align="center" width="100%">
+    <img width="47%" src="https://github.com/jkaewprateep/IBM---SQL-A-Practical-Introduction-for-Querying-Databases/blob/main/cat_04.jpg"> </br>
+    <b> Pictures from the Internet </b> </br>
+</p>
 
 ```
 # Q9 Use a sub-query to determine which Community Area has the least value for school Safety Score?
