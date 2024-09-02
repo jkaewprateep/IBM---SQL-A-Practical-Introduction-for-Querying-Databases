@@ -30,6 +30,8 @@ IBM - SQL A Practical Introduction for Querying Databases
 
 ---
 
+## Practical quizzes - not a peer review, SQL joining ##
+
 ```
 
 --- Query1A ---
