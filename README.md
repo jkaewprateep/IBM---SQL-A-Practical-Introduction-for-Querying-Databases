@@ -16,30 +16,120 @@ IBM - SQL A Practical Introduction for Querying Databases
 ## Practical quizzes - not a peer review ##
 
 ```
-# Q1 List the case number, type of crime and community area for all crimes in community area number 18. # SELECT * FROM chicago_socioeconomic_data WHERE `COMMUNITY_AREA_NUMBER` = 18; # SELECT * FROM chicago_crime # SELECT * FROM chicago_public_schools # area SELECT * FROM chicago_public_schools A INNER JOIN ( SELECT * FROM chicago_socioeconomic_data ) B ON A.COMMUNITY_AREA_NUMBER = B.COMMUNITY_AREA_NUMBER
+# Q1 List the case number, type of crime and community area for all crimes in community area number 18.
+# SELECT * FROM chicago_socioeconomic_data WHERE `COMMUNITY_AREA_NUMBER` = 18;
+# SELECT * FROM chicago_crime
+# SELECT * FROM chicago_public_schools
+
+# area
+SELECT * FROM chicago_public_schools A INNER JOIN ( SELECT * FROM chicago_socioeconomic_data ) B
+	ON A.COMMUNITY_AREA_NUMBER = B.COMMUNITY_AREA_NUMBER
+;
 ```
 
 ```
-# Q2 List all crimes that took place at a school. Include case number, crime type and community name. SELECT * FROM chicago_crime A LEFT JOIN ( SELECT * FROM chicago_socioeconomic_data ) B ON A.COMMUNITY_AREA_NUMBER = B.COMMUNITY_AREA_NUMBER
+# Q2 List all crimes that took place at a school. Include case number, crime type and community name.
+
+SELECT * FROM chicago_crime A LEFT JOIN ( SELECT * FROM chicago_socioeconomic_data ) B
+	ON A.COMMUNITY_AREA_NUMBER = B.COMMUNITY_AREA_NUMBER
+;
 ```
 
 ```
-# Q3 For the communities of Oakland, Armour Square, Edgewater and CHICAGO list the associated community_area_numbers and the case_numbers. SELECT * FROM chicago_crime A LEFT JOIN ( SELECT * FROM `chicago_socioeconomic_data` WHERE COMMUNITY_AREA_NAME IN ( 'Oakland', 'Armour Square', 'Edgewater', 'Chicago Lawn' )) B ON A.COMMUNITY_AREA_NUMBER = B.COMMUNITY_AREA_NUMBER
+# Q3 For the communities of Oakland, Armour Square, Edgewater and CHICAGO list the associated
+# community_area_numbers and the case_numbers.
+
+SELECT * FROM chicago_crime A LEFT JOIN ( SELECT * FROM `chicago_socioeconomic_data` WHERE COMMUNITY_AREA_NAME
+	IN ( 'Oakland', 'Armour Square', 'Edgewater', 'Chicago Lawn' )) B
+	ON A.COMMUNITY_AREA_NUMBER = B.COMMUNITY_AREA_NUMBER
+;
 ```
 
+```
+CREATE VIEW view_chicagopublicschools(
+    School_Name, Safety_Rating, Family_Rating, Environment_Rating, Instruction_Rating,
+    Leaders_Rating, Teachers_Rating
+    )
+AS SELECT ALL `NAME_OF_SCHOOL`, `Safety_Icon`, `Family_Involvement_Icon`, `Environment_Icon`,
+	`Instruction_Icon`, `Leaders_Icon`, `Teachers_Icon` FROM chicago_public_schools
+
+SELECT `School_Name`, `Teachers_Rating` FROM view_chicagopublicschools
+;
+```
+
+```
+DELIMITER //
+CREATE PROCEDURE UPDATE_LEADERS_SCORE 
+(
+   in_School_ID varchar(128),
+   in_Leader_Score varchar(128)
+) 
+BEGIN 
+
+DECLARE ICON VARCHAR(50);
+DECLARE TEMP_ICON VARCHAR(50);
+
+SELECT Leaders_Icon 
+FROM chicago_public_schools
+WHERE in_School_ID = School_ID LIMIT 1
+INTO TEMP_ICON;
+
+SELECT (
+    CASE 
+        WHEN in_Leader_Score > 80 AND in_Leader_Score THEN 'Very strong'
+        WHEN in_Leader_Score > 60 AND in_Leader_Score <= 79 THEN 'Strong'
+        WHEN in_Leader_Score > 40 AND in_Leader_Score <= 59 THEN 'Average'
+        WHEN in_Leader_Score > 20 AND in_Leader_Score <= 39 THEN 'Weak'
+        WHEN in_Leader_Score >  0 AND in_Leader_Score <= 19 THEN 'Very Weak'
+        ELSE TEMP_ICON
+    END) INTO ICON;
+
+UPDATE chicago_public_schools
+SET Leaders_Icon = ICON
+WHERE in_School_ID = School_ID; 
+
+SELECT School_ID, Leaders_Icon 
+FROM chicago_public_schools
+WHERE in_School_ID = School_ID; 
+
+COMMIT;
+END
+```
+
+```
+# Q9 Use a sub-query to determine which Community Area has the least value for school Safety Score?
+
+SELECT * FROM "PYV10949".chicago_public_schools 
+WHERE "SAFETY_SCORE" = ( SELECT MIN("SAFETY_SCORE") 
+FROM "PYV10949".chicago_public_schools 
+WHERE "SAFETY_SCORE" > 0 )
+;
+```
+
+```
+# Q10 [Without using an explicit JOIN operator]
+	Find the Per Capita Income of the Community Area which has a school Safety Score of 1.
+
+SELECT "PER_CAPITA_INCOME" FROM "PYV10949".chicago_census_data
+	WHERE "COMMUNITY_AREA_NUMBER" IN ( SELECT "COMMUNITY_AREA_NUMBER"
+		FROM "PYV10949".chicago_public_schools WHERE "SAFETY_SCORE" = 1 )
+;
+```
 
 ---
 
 ## Practical quizzes - not a peer review, SQL joining ##
 
 ```
-
 --- Query1A ---
 select E.F_NAME,E.L_NAME, JH.START_DATE 
 	from EMPLOYEES as E 
 	INNER JOIN JOB_HISTORY as JH on E.EMP_ID=JH.EMPL_ID 
 	where E.DEP_ID ='5'
-;	
+;
+```
+
+```
 --- Query1B ---	
 select E.F_NAME,E.L_NAME, JH.START_DATE, J.JOB_TITLE 
 	from EMPLOYEES as E 
@@ -47,29 +137,44 @@ select E.F_NAME,E.L_NAME, JH.START_DATE, J.JOB_TITLE
 	INNER JOIN JOBS as J on E.JOB_ID=J.JOB_IDENT
 	where E.DEP_ID ='5'
 ;
+```
+
+```
 --- Query 2A ---
 select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
 	from EMPLOYEES AS E 
 	LEFT OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP
-;	
+;
+```
+
+```
 --- Query 2B ---
 select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
 	from EMPLOYEES AS E 
 	LEFT OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP 
 	where YEAR(E.B_DATE) < 1980
 ;
+```
+
+```
 --- alt Query 2B ---
 select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
 	from EMPLOYEES AS E 
 	INNER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP 
 	where YEAR(E.B_DATE) < 1980
 ;
+```
+
+```
 --- Query 2C ---
 select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
 	from EMPLOYEES AS E 
 	LEFT OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP 
 	AND YEAR(E.B_DATE) < 1980
 ;
+```
+
+```
 --- Query 3A ---
 
 select E.F_NAME,E.L_NAME,D.DEP_NAME
@@ -81,6 +186,10 @@ UNION
 select E.F_NAME,E.L_NAME,D.DEP_NAME
 	from EMPLOYEES AS E 
 RIGHT OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP
+;
+```
+
+```
 --- Query 3B ---
 select E.F_NAME,E.L_NAME,D.DEPT_ID_DEP, D.DEP_NAME
 	from EMPLOYEES AS E 
@@ -93,6 +202,9 @@ select E.F_NAME,E.L_NAME,D.DEPT_ID_DEP, D.DEP_NAME
 	from EMPLOYEES AS E 
 	RIGHT OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP AND E.SEX = 'M'
 ;
+```
+
+```
 --- alt Query 3B ---
 select E.F_NAME,E.L_NAME,D.DEPT_ID_DEP, D.DEP_NAME
 	from EMPLOYEES AS E 
