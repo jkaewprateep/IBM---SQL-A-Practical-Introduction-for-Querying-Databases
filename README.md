@@ -83,6 +83,10 @@ SELECT `School_Name`, `Teachers_Rating` FROM view_chicagopublicschools
 ```
 
 ### Select and switch-cases conditions in the programming store PROCEDURE ###
+<p align="center" width="100%">
+    <img width="47%" src="https://github.com/jkaewprateep/IBM---SQL-A-Practical-Introduction-for-Querying-Databases/blob/main/cat_03.png"> </br>
+    <b> Pictures from the Internet </b> </br>
+</p>
 
 ```
 DELIMITER //
