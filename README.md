@@ -78,6 +78,8 @@ SELECT * FROM chicago_crime A LEFT JOIN ( SELECT * FROM `chicago_socioeconomic_d
     <b> Pictures from the Internet </b> </br>
 </p>
 
+🐨🎁🎵🎶 A composite view is the structure of data selection, filters, joined, transform, merged, and display capable of multiple purposes. Portability, flexibility, parameterize, and data format standardized return as resultset or records, it is composite views because they can composed of multiple selection views to create a usability matrix for evaluation and performance tuning of query and database from user work adaptations and requirements. </br>
+
 ```
 CREATE VIEW view_chicagopublicschools(
     School_Name, Safety_Rating, Family_Rating, Environment_Rating, Instruction_Rating,
