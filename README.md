@@ -65,6 +65,11 @@ SELECT * FROM chicago_crime A LEFT JOIN ( SELECT * FROM `chicago_socioeconomic_d
 ```
 
 ### Create table view object ###
+<p align="center" width="100%">
+    <img width="40%" src="https://github.com/jkaewprateep/IBM---SQL-A-Practical-Introduction-for-Querying-Databases/blob/main/needle_practice_01.jpg"> </br>
+    <b> Pictures from the Internet </b> </br>
+</p>
+
 ```
 CREATE VIEW view_chicagopublicschools(
     School_Name, Safety_Rating, Family_Rating, Environment_Rating, Instruction_Rating,
