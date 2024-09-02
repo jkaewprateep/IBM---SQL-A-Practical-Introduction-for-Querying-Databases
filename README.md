@@ -216,6 +216,7 @@ select E.F_NAME,E.L_NAME, JH.START_DATE, J.JOB_TITLE
 ### Select, and left outer join ###
 
 🐯💬 Finding user activity from the user logout-login table time and summarizing of interaction id you can have interaction activities for comparison with interactions activities and target media results in user activities and none-users activities and that also applied for station id to find non-login activities. Some programmers may set up station id with a concatenated string to simplify of this problem and that is some Culture-INFO and that is correct otherwise network team needs to query this. </br>
+🦁💬 It simplifies the problem and in soft-phone we concatenate 'w' or 's' as user requirements but you may not see it because of it is created from user's requirements and they are fast-growing development projects they inherited from original sources. </br>
 
 ```
 --- Query 2A ---
