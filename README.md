@@ -243,7 +243,7 @@ select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
 ### Select, inner join and where conditions ###
 
 🐑💬 ➰ Login or user id please use inner joined which is not because of un-balancing records but for active records in both activities monitoring and registration process as application authentication logics. </br>
-🧸💬 Authentication needs to query there is a target user exists in both data tables of the registration process and authentication process because of their request then perform select inner for exact matching criteria for one record and some applications try to solve this problem by activities or order in the table that almost cases but when delay process of registration services response they cannot log in. </br>
+🧸💬 Authentication needs to query there is a target user exists in both data tables of the registration process and authentication process because of their request then perform select inner for exact matching criteria for one record and some applications try to solve this problem by activities or order in the table that almost cases but when delay process of registration services response they cannot log in. ( Even they added new record into data table by protected one data table ) </br>
 
 ```
 --- alt Query 2B ---
