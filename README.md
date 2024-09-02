@@ -167,7 +167,8 @@ WHERE "SAFETY_SCORE" > 0 )
     <b> Pictures from the Internet </b> </br>
 </p>
 
-🦭💬 Evaluation needs to be performed after the SQL statement but categorization can be performed it before some applications apply the technique of database categorization by using a database filter with a database record trigger or interaction by category table using application or database process. This method helps determine the categorize faster but you need to be aware of the condition of the primary and secondary categorize because full records are required of both categorized groups and their description. </br>
+🦭💬 Evaluation needs to be performed after the SQL statement but categorization can be performed it before some applications apply the technique of database categorization by using a database filter with a database record trigger or interaction by category table using application or database process. This method helps determine the categorization faster but you need to be aware of the condition of the primary and secondary categories because full records are required of both categorized groups and their description. </br>
+🦁💬 A single table index is enough for filter records selection but categorizes design support of composite messages display and user group authority because database object accessibility and table description cannot have full meaning without an authorized method. The categorize method is not an encryption method if you have access to all required objects you can read the full message but they are not fully joined if you are not authorized, the idea is found in many software applications and new generations of software design protected data by encryption and make the joining task simpler. </br>
 
 ```
 # Q10 [Without using an explicit JOIN operator]
