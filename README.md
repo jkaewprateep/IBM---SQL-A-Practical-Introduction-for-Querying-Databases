@@ -187,7 +187,7 @@ SELECT "PER_CAPITA_INCOME" FROM "PYV10949".chicago_census_data
 ### Select, inner join and where cause conditions ###
 
 🧸💬 Better than evaluation, aggregation selection method inner joined with where causes can perform indexes for the faster response of sub-queries and min-max values. </br>
-🦭💬 Now you know the database subqueries joining when someone tries to fetch the min-max value from none-indexes fields in the remote data table, SQL statement is a guarantee return method by the min-max function. Try to compare the joining method on sub-queries and aggregate method and see the performance. </br>
+🦭💬 Now you know the database subqueries joining when someone tries to fetch the min-max value from none-indexes fields in the remote data table, SQL statement is a guarantee return method by the min-max function. Try to compare the joining method on sub-queries and the aggregate method and see the performance. </br>
 
 ```
 --- Query1A ---
@@ -199,6 +199,9 @@ select E.F_NAME,E.L_NAME, JH.START_DATE
 ```
 
 ### Select, inner join and where cause conditions with multiple columns matching ###
+
+🐑💬 ➰ In sub-queries you can have multiple conditions and aggregate methods when an application can perform aggregate or SQL server depending on the complexity of the queries and debugging method. </br>
+🐐💬 Client aggregate had performance when there are multiple-session queries for different requirements scenarios such as development server and study and research. Debugging and performance optimization on clients can perform database caches such as in the server, try-catch and error handling exceptions, or temporary and statistics management tables. By refreshing query results consider client and server database caches when you perform the update with no notification and often found in new development servers without database client commit method or completed the step of procedures. ( Depending on database settings and database behavior) </br>
 
 ```
 --- Query1B ---	
