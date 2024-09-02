@@ -144,6 +144,10 @@ WHERE "SAFETY_SCORE" > 0 )
 ```
 
 ### Select data column value from the existence of value in the target data table ###
+<p align="center" width="100%">
+    <img width="47%" src="https://github.com/jkaewprateep/IBM---SQL-A-Practical-Introduction-for-Querying-Databases/blob/main/cat_05.jpg"> </br>
+    <b> Pictures from the Internet </b> </br>
+</p>
 
 ```
 # Q10 [Without using an explicit JOIN operator]
