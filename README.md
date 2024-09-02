@@ -21,6 +21,7 @@ IBM - SQL A Practical Introduction for Querying Databases
     <b> Pictures from the Internet </b> </br>
 </p>
 
+🧸💬 There are many of names I recognize from this games somebody say it is tele-games, overy as shape and catch-n-tail where they are develop into some meaning word and action to find friend who need most help to tracking the line. </br>
 
 ```
 # Q1 List the case number, type of crime and community area for all crimes in community area number 18.
