@@ -15,6 +15,7 @@ IBM - SQL A Practical Introduction for Querying Databases
 
 ## Practical quizzes - not a peer review ##
 
+### Select, where cause condition, and inner join ###
 ```
 # Q1 List the case number, type of crime and community area for all crimes in community area number 18.
 # SELECT * FROM chicago_socioeconomic_data WHERE `COMMUNITY_AREA_NUMBER` = 18;
@@ -27,6 +28,7 @@ SELECT * FROM chicago_public_schools A INNER JOIN ( SELECT * FROM chicago_socioe
 ;
 ```
 
+### Select, where cause condition, and left join ###
 ```
 # Q2 List all crimes that took place at a school. Include case number, crime type and community name.
 
@@ -35,6 +37,7 @@ SELECT * FROM chicago_crime A LEFT JOIN ( SELECT * FROM chicago_socioeconomic_da
 ;
 ```
 
+### Select, where cause condition, and left join sub-query ###
 ```
 # Q3 For the communities of Oakland, Armour Square, Edgewater and CHICAGO list the associated
 # community_area_numbers and the case_numbers.
@@ -45,6 +48,7 @@ SELECT * FROM chicago_crime A LEFT JOIN ( SELECT * FROM `chicago_socioeconomic_d
 ;
 ```
 
+### Create table view object ###
 ```
 CREATE VIEW view_chicagopublicschools(
     School_Name, Safety_Rating, Family_Rating, Environment_Rating, Instruction_Rating,
@@ -56,6 +60,8 @@ AS SELECT ALL `NAME_OF_SCHOOL`, `Safety_Icon`, `Family_Involvement_Icon`, `Envir
 SELECT `School_Name`, `Teachers_Rating` FROM view_chicagopublicschools
 ;
 ```
+
+### Select and switch-cases conditions in the programming store PROCEDURE ###
 
 ```
 DELIMITER //
@@ -96,6 +102,8 @@ COMMIT;
 END
 ```
 
+### Select min-max from the remote data table ###
+
 ```
 # Q9 Use a sub-query to determine which Community Area has the least value for school Safety Score?
 
@@ -105,6 +113,8 @@ FROM "PYV10949".chicago_public_schools
 WHERE "SAFETY_SCORE" > 0 )
 ;
 ```
+
+### Select data column value from the existence of value in the target data table ###
 
 ```
 # Q10 [Without using an explicit JOIN operator]
@@ -120,6 +130,8 @@ SELECT "PER_CAPITA_INCOME" FROM "PYV10949".chicago_census_data
 
 ## Practical quizzes - not a peer review, SQL joining ##
 
+### Select, inner join and where cause conditions ###
+
 ```
 --- Query1A ---
 select E.F_NAME,E.L_NAME, JH.START_DATE 
@@ -128,6 +140,8 @@ select E.F_NAME,E.L_NAME, JH.START_DATE
 	where E.DEP_ID ='5'
 ;
 ```
+
+### Select, inner join and where cause conditions with multiple columns matching ###
 
 ```
 --- Query1B ---	
@@ -139,6 +153,8 @@ select E.F_NAME,E.L_NAME, JH.START_DATE, J.JOB_TITLE
 ;
 ```
 
+### Select, and left outer join ###
+
 ```
 --- Query 2A ---
 select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
@@ -146,6 +162,8 @@ select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
 	LEFT OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP
 ;
 ```
+
+### Select, left outer join and where conditions ###
 
 ```
 --- Query 2B ---
@@ -156,6 +174,8 @@ select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
 ;
 ```
 
+### Select, inner join and where conditions ###
+
 ```
 --- alt Query 2B ---
 select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
@@ -164,6 +184,8 @@ select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
 	where YEAR(E.B_DATE) < 1980
 ;
 ```
+
+### Select, left outer join and where conditions ###
 
 ```
 --- Query 2C ---
@@ -174,20 +196,24 @@ select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
 ;
 ```
 
+### UNION sub-queries, joining ###
+
 ```
 --- Query 3A ---
 
 select E.F_NAME,E.L_NAME,D.DEP_NAME
 	from EMPLOYEES AS E 
-LEFT OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP
+	LEFT OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP
 
 UNION
 
 select E.F_NAME,E.L_NAME,D.DEP_NAME
 	from EMPLOYEES AS E 
-RIGHT OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP
+	RIGHT OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP
 ;
 ```
+
+### UNION sub-queries, joining on multiple matching conditions ###
 
 ```
 --- Query 3B ---
@@ -203,6 +229,8 @@ select E.F_NAME,E.L_NAME,D.DEPT_ID_DEP, D.DEP_NAME
 	RIGHT OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP AND E.SEX = 'M'
 ;
 ```
+
+### Select, left outer join and where conditions ###
 
 ```
 --- alt Query 3B ---
