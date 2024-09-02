@@ -201,7 +201,7 @@ select E.F_NAME,E.L_NAME, JH.START_DATE
 ### Select, inner join and where cause conditions with multiple columns matching ###
 
 🐑💬 ➰ In sub-queries you can have multiple conditions and aggregate methods when an application can perform aggregate or SQL server depending on the complexity of the queries and debugging method. </br>
-🐐💬 Client aggregate had performance when there are multiple-session queries for different requirements scenarios such as development server and study and research. Debugging and performance optimization on clients can perform database caches such as in the server, try-catch and error handling exceptions, or temporary and statistics management tables. By refreshing query results consider client and server database caches when you perform the update with no notification and often found in new development servers without database client commit method or completed the step of procedures. ( Depending on database settings and database behavior) </br>
+🐐💬 Client aggregate had performance when there are multiple-session queries for different requirements scenarios such as development server and study and research. Debugging and performance optimization on clients can perform database caches such as in the server, try-catch and error handling exceptions, or temporary and statistics management tables. By refreshing query results consider client and server database caches when you perform the update with no notification and often found in new development servers without database client commit method or completed the step of procedures. ( Depending on database settings and database behavior ) </br>
 
 ```
 --- Query1B ---	
@@ -214,6 +214,9 @@ select E.F_NAME,E.L_NAME, JH.START_DATE, J.JOB_TITLE
 ```
 
 ### Select, and left outer join ###
+
+🐯💬 We would like to use INNER and OUTER SQL query statement techniques because of fast method adaptation, and database table designed to find matching and update information from the query statement such as login-logout and last activities of users and transactions. The database-INFO such as collision domain, encodings, and program name need to be maintained along with the process and evaluation. For example, the fast query of login, and the last activities of users with few command changes are saved with detail tables. </br>
+🦁💬 Vienn diagram is an example of a problem logic solution, query statement keyword is monitoring and control when modified of the SQL statement command with these words create different effects but specific on the similar where causes and filters conditions are selected from specific criteria. Joining the users table and users activities table will result in all activities of users in the details table query, first or last users activities in inner joining, and where causes and update activities in outer joining. </br>
 
 ```
 --- Query 2A ---
