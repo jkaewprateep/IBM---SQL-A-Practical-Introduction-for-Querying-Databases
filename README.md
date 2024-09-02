@@ -79,6 +79,8 @@ SELECT * FROM chicago_crime A LEFT JOIN ( SELECT * FROM `chicago_socioeconomic_d
 </p>
 
 🐨🎁🎵🎶 A composite view is the structure of data selection, filters, joined, transform, merged, and display capable of multiple purposes. Portability, flexibility, parameterize, and data format standardized return as resultset or records, it is composite views because they can composed of multiple selection views to create a usability matrix for evaluation and performance tuning of query and database from user work adaptations and requirements. </br>
+👧💬 🎈 The composite view can be selected from the database table, incremental database table, system table, and SQL selectable objects when applied with a filter some tasks can be performed by the user and controlled by user permissions accessibility for the particular material views or composite views object with high-performance design by the database administrator, sources control, users permission groups, database object limitation, and exporting level. </br>
+🐐💬 You just cannot copy values from the result set to return in the SQL database administrator tool or its IDE because of an experienced database administrator, it is an observation meeting for IT project requirements surveys. </br>
 
 ```
 CREATE VIEW view_chicagopublicschools(
