@@ -100,6 +100,9 @@ SELECT `School_Name`, `Teachers_Rating` FROM view_chicagopublicschools
     <b> Pictures from the Internet </b> </br>
 </p>
 
+💃( 👩‍🏫 )💬 SQL query needs to perform performance evaluation and selecting conditions indent display and/or create as switch-cases condition and monitor logging debugging of switch-cases condition for problem solution debugging of SQL selection message communications. </br>
+🦤💬 Not all conditions can perform switch-case they are singular problems, and common and unique, the steps to procedure guarantee the tasks contained inside perform priority, logging of the input and results or debugging setting for evaluation backlog or performance improvement forward into the future. </br>
+
 ```
 DELIMITER //
 CREATE PROCEDURE UPDATE_LEADERS_SCORE 
